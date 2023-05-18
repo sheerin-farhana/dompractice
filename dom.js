@@ -66,7 +66,7 @@ items[3].style.backgroundColor = 'blue';*/
 
 //getelementsbytagname
 
-let li = document.getElementsByTagName('li');
+/*let li = document.getElementsByTagName('li');
 console.log(li);
 console.log(li[1]);
 //items[1].textContent ='Hello 2';
@@ -82,4 +82,61 @@ for(let i=0;i<items.length;i++){
 //items[1].textContent ='changed'; - this overrides the above texContent property setting
 li[2].style.backgroundColor = 'green';
 li[0].style.backgroundColor = 'red';
-li[3].style.backgroundColor = 'blue';
+li[3].style.backgroundColor = 'blue';*/
+
+
+//query selector //
+
+/*let header = document.querySelector('#main-header');
+header.style.borderBottom = 'solid 4px #ccc';
+
+let input = document.querySelector('input');
+input.value = 'hello world';
+
+let submit = document.querySelector('input[type="submit"]');
+submit.value = "SEND";
+
+let item = document.querySelector('.list-group-item');
+item.style.color = 'red';
+item.style.fontWeight= 'bold';
+
+let lastItem = document.querySelector('.list-group-item:last-child');
+lastItem.style.color = 'blue';
+lastItem.style.fontWeight= 'bold';
+
+let secondItem = document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.color ='yellow';
+secondItem.style.fontWeight= 'bold';
+secondItem.style.backgroundColor = 'green';
+
+
+let thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.color = 'blue';
+thirdItem.style.fontWeight='bold';
+thirdItem.style.display ='none';
+
+//query selector all //
+
+let titles = document.querySelectorAll('.title');*/
+
+/*console.log(titles);
+//titles[0].textContent = 'Hello';
+titles[1].textContent = 'List of Items';
+titles[1].style.fontWeight = 'bold';
+*/
+
+
+
+
+/*let list = document.querySelectorAll('li');
+console.log(list);
+list[1].style.color = 'green';*/
+
+let odd = document.querySelectorAll('li:nth-child(odd)');
+for(let i=0;i<odd.length;i++){
+    odd[i].style.backgroundColor = 'green';
+}
+
+
+
+
