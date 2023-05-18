@@ -37,10 +37,30 @@ console.log(headerTitle);
 //let header = document.getElementById('main-header');
 //header.style.borderBottom = 'solid 3px #000';
 
-// GETELEMENTSBYCLASSNAME //
+
 
 let header1 = document.getElementById('add-items');
 
 header1.style.color = 'green';
 header1.style.fontWeight='bold';
+
+// GETELEMENTSBYCLASSNAME //
+
+let items = document.getElementsByClassName('list-group-item');
+console.log(items);
+console.log(items[1]);
+//items[1].textContent ='Hello 2';
+items[1].style.fontWeight = 'bold';
+items[1].style.backgroundColor='yellow';
+
+//items.style.backgroundColor = '#f4f4f4'; - gives error, you need to loop through items elements to solve this 
+
+for(let i=0;i<items.length;i++){
+    items[i].style.fontWeight='bold';
+}
+
+//items[1].textContent ='changed'; - this overrides the above texContent property setting
+items[2].style.backgroundColor = 'green';
+items[0].style.backgroundColor = 'red';
+items[3].style.backgroundColor = 'blue';
 
