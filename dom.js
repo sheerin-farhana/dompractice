@@ -15,7 +15,7 @@ console.log(document.all[10]);
 console.log(document.forms[0]); 
 console.log(document.links);*/
 
-console.log("images collections"+document.images);
+//console.log("images collections"+document.images);
 
 // Selectors 
 //1. get element by id 
@@ -132,11 +132,111 @@ titles[1].style.fontWeight = 'bold';
 console.log(list);
 list[1].style.color = 'green';*/
 
-let odd = document.querySelectorAll('li:nth-child(odd)');
+/*let odd = document.querySelectorAll('li:nth-child(odd)');
 for(let i=0;i<odd.length;i++){
     odd[i].style.backgroundColor = 'green';
-}
+}*/
 
+
+
+
+
+
+//creating nodes and modifyind Dom deliverables
+
+//Traversing the Dom //
+
+let itemList = document.querySelector('#items');
+//parentNode property
+/*console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor = "#f4f4f4"
+console.log(itemList.parentNode.parentNode);
+console.log(itemList.parentNode.parentNode.parentNode);*/
+
+//parentElement 
+/*console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor = "#ccc"
+console.log(itemList.parentElement.parentElement);
+console.log(itemList.parentElement.parentElement.parentElement);*/
+
+//childNodes
+//console.log(itemList.childNodes);
+
+/*console.log(itemList.children);
+console.log(itemList.children[1]);
+
+itemList.children[1].style.backgroundColor = 'yellow'*/
+
+//FirstChild 
+/*console.log(itemList.firstChild);
+//firstElementChild
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent ='Hello 1';*/
+
+//LastChild 
+console.log(itemList.lastChild);
+//lastElementChild
+//console.log(itemList.lastElementChild);
+//itemList.lastElementChild.textContent ='Hello 4';
+
+
+//nextSibling
+//console.log(itemList.nextSibling);
+//nextElementSibling
+//console.log(itemList.nextElementSibling);
+
+// previousSibling
+//console.log(itemList.previousSibling);
+//previouElementSibling
+//console.log(itemList.previousElementSibling);
+//itemList.previousElementSibling.style.color = 'red';
+
+//Creating Dom Elements 
+
+//createElement
+//create a div
+
+let newDiv = document.createElement('div');
+//add class
+newDiv.className = 'hello';
+
+//add div
+newDiv.id = 'hello1';
+
+//add attribute
+newDiv.setAttribute('title','hello div');
+
+//Create a text node 
+
+let newDivText = document.createTextNode('HelloWorld');
+
+
+//add text to div
+
+newDiv.appendChild(newDivText);
+
+console.log(newDiv);
+
+//inserting the node to dom
+
+let containetr = document.querySelector('header .container');
+let h1 = document.querySelector('header h1');
+
+newDiv.style.fontSize = '30px';
+
+containetr.insertBefore(newDiv ,  h1);
+
+let newDiv1 = document.createElement('div');
+newDiv1.className = 'item';
+newDiv1.id = 'item1';
+newDiv1.setAttribute('title','hello list item');
+let newDiv1Text = document.createTextNode('Hello World');
+newDiv1.appendChild(newDiv1Text);
+console.log(newDiv1);
+let h2 = document.querySelector('#items');
+let items =document.querySelector('.list-group-item');
+
+h2.insertBefore(newDiv1 ,  items);
 
 
 
