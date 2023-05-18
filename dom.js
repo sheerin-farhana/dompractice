@@ -46,7 +46,7 @@ header1.style.fontWeight='bold';
 
 // GETELEMENTSBYCLASSNAME //
 
-let items = document.getElementsByClassName('list-group-item');
+/*let items = document.getElementsByClassName('list-group-item');
 console.log(items);
 console.log(items[1]);
 //items[1].textContent ='Hello 2';
@@ -62,5 +62,24 @@ for(let i=0;i<items.length;i++){
 //items[1].textContent ='changed'; - this overrides the above texContent property setting
 items[2].style.backgroundColor = 'green';
 items[0].style.backgroundColor = 'red';
-items[3].style.backgroundColor = 'blue';
+items[3].style.backgroundColor = 'blue';*/
 
+//getelementsbytagname
+
+let li = document.getElementsByTagName('li');
+console.log(li);
+console.log(li[1]);
+//items[1].textContent ='Hello 2';
+li[1].style.fontWeight = 'bold';
+li[1].style.backgroundColor='yellow';
+
+//items.style.backgroundColor = '#f4f4f4'; - gives error, you need to loop through items elements to solve this 
+
+for(let i=0;i<items.length;i++){
+    li[i].style.fontWeight='bold';
+}
+ 
+//items[1].textContent ='changed'; - this overrides the above texContent property setting
+li[2].style.backgroundColor = 'green';
+li[0].style.backgroundColor = 'red';
+li[3].style.backgroundColor = 'blue';
