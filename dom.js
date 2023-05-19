@@ -226,13 +226,15 @@ newDiv.style.fontSize = '30px';
 
 containetr.insertBefore(newDiv ,  h1);
 
+
+//Deliverable 2
 let newDiv1 = document.createElement('div');
 newDiv1.className = 'item';
 newDiv1.id = 'item1';
 newDiv1.setAttribute('title','hello list item');
 let newDiv1Text = document.createTextNode('Hello World');
 newDiv1.appendChild(newDiv1Text);
-console.log(newDiv1);
+
 let h2 = document.querySelector('#items');
 let items =document.querySelector('.list-group-item');
 
